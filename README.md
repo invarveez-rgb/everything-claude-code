@@ -210,7 +210,23 @@ This gives you instant access to all commands, agents, skills, and hooks.
 
 ### Option 2: Manual Installation
 
-If you prefer manual control over what's installed:
+If you prefer manual control over what's installed, you'll need to run this on your Windows host:
+
+```cmd
+:: 1. Create directories
+mkdir "%USERPROFILE%\.claude\agents"
+mkdir "%USERPROFILE%\.claude\rules"
+mkdir "%USERPROFILE%\.claude\commands"
+mkdir "%USERPROFILE%\.claude\skills"
+
+:: 2. Copy files and subdirectories
+xcopy /E /I /Y "agents\*" "%USERPROFILE%\.claude\agents\"
+xcopy /E /I /Y "rules\*" "%USERPROFILE%\.claude\rules\"
+xcopy /E /I /Y "commands\*" "%USERPROFILE%\.claude\commands\"
+xcopy /E /I /Y "skills\*" "%USERPROFILE%\.claude\skills\"
+```
+
+Or for macOS/Linux:
 
 ```bash
 # Clone the repo
