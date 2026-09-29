@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git clone *)",
+      "Bash(cmd.exe /c \"where git || where gh || where winget\")",
+      "Bash(\"/c/Program Files/Git/cmd/git.exe\" clone https://github.com/invarveez-rgb/everything-claude-code.git .)",
+      "Bash(\"/c/Program Files/Git/cmd/git.exe\" init)",
+      "Bash(\"/c/Program Files/Git/cmd/git.exe\" remote add origin https://github.com/invarveez-rgb/everything-claude-code.git)",
+      "Bash(\"/c/Program Files/Git/cmd/git.exe\" fetch origin)",
+      "Bash(\"/c/Program Files/Git/cmd/git.exe\" checkout -f -t origin/main)",
+      "Bash(\"/c/Program Files/Git/cmd/git.exe\" checkout -f -t origin/master)",
+      "Bash(node scripts/setup-package-manager.js --detect)",
+      "Bash(\"/c/Program Files/nodejs/node.exe\" scripts/setup-package-manager.js --detect)",
+      "Bash(cp -r agents/* ~/.claude/agents/)",
+      "Bash(cp rules/* ~/.claude/rules/)",
+      "Bash(cp commands/* ~/.claude/commands/)",
+      "Bash(cp -r skills/* ~/.claude/skills/)",
+      "Bash(mkdir -p ~/.claude/agents ~/.claude/rules ~/.claude/commands ~/.claude/skills)"
+    ]
+  }
+}
